@@ -9,8 +9,8 @@ public class GameManagerScript : MonoBehaviour
 
     void Start()
     {
-        leftScore = -2;
-        rightScore = -2;
+        leftScore = 0;
+        rightScore = 0;
     }
 
     public void LeftScores()

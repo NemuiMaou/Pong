@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - LeftTrigger
   - RightTrigger
+  - Ball
   layers:
   - Default
   - TransparentFX

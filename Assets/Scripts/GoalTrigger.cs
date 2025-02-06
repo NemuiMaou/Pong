@@ -8,27 +8,30 @@ public class NewMonoBehaviourScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Debug.Log($"made contact with {other.gameObject.name}");
-        if (tag.Equals("LeftTrigger"))
+        if (other.CompareTag("Ball"))
         {
-            Script.RightScores();
-            Script.BallReset(false);
-        }
-        else
-        {
-            Script.LeftScores();
-            Script.BallReset(true);
-        }
-        
-            
-        if (Script.leftScore >= 11 || Script.rightScore >= 11)
-        {
-            if (Script.leftScore >= 11)
+            if (tag.Equals("LeftTrigger"))
             {
-                Script.EndGame("Left");
+                Script.RightScores();
+                Script.BallReset(false);
             }
             else
             {
-                Script.EndGame("Right");
+                Script.LeftScores();
+                Script.BallReset(true);
+            }
+
+
+            if (Script.leftScore >= 11 || Script.rightScore >= 11)
+            {
+                if (Script.leftScore >= 11)
+                {
+                    Script.EndGame("Left");
+                }
+                else
+                {
+                    Script.EndGame("Right");
+                }
             }
         }
     }

@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 316974648}
   - component: {fileID: 316974647}
   - component: {fileID: 316974646}
+  - component: {fileID: 316974649}
   m_Layer: 0
   m_Name: Wall 1
   m_TagString: Wall
@@ -526,7 +527,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316974644}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c433144d3318f434db345e805e11d67b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -593,6 +594,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316974644}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &316974649
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316974644}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,8 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18b7af83fde68b43ab1ded471ffb7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1300513934}
-  ballInstance: {fileID: 1300513937}
+  ball: {fileID: 1300513937}
   leftScore: 0
   rightScore: 0
 --- !u!1 &1300513930
@@ -1175,7 +1202,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300513930}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c433144d3318f434db345e805e11d67b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1279,7 +1306,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
@@ -1296,7 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b296c22c44d5a4f87980d41f4a57f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 150
 --- !u!1 &1387680347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1309,6 +1336,7 @@ GameObject:
   - component: {fileID: 1387680350}
   - component: {fileID: 1387680349}
   - component: {fileID: 1387680348}
+  - component: {fileID: 1387680352}
   m_Layer: 0
   m_Name: Left Goal
   m_TagString: LeftTrigger
@@ -1405,6 +1433,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1387680352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387680347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16824accca60fd74eb84032e859177d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Script: {fileID: 1298358484}
 --- !u!1 &2108362015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1458,7 @@ GameObject:
   - component: {fileID: 2108362019}
   - component: {fileID: 2108362018}
   - component: {fileID: 2108362017}
+  - component: {fileID: 2108362020}
   m_Layer: 0
   m_Name: Wall 2
   m_TagString: Wall
@@ -1446,7 +1488,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108362015}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: c433144d3318f434db345e805e11d67b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1513,6 +1555,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108362015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &2108362020
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108362015}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2123648560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1594,7 @@ GameObject:
   - component: {fileID: 2123648563}
   - component: {fileID: 2123648562}
   - component: {fileID: 2123648561}
+  - component: {fileID: 2123648565}
   m_Layer: 0
   m_Name: Right Goal
   m_TagString: RightTrigger
@@ -1621,6 +1691,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2123648565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123648560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16824accca60fd74eb84032e859177d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Script: {fileID: 1298358484}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
