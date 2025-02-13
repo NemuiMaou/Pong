@@ -6,7 +6,6 @@ public class Ball : MonoBehaviour
 {
     public float speed = 150.0f;
     private Rigidbody rb;
-    private float speedIncrease = 1.2f;
 
     private void Awake()
     {
@@ -16,22 +15,6 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         AddStartingForce();
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        //Debug.Log($"made contact with {other.gameObject.name}");
-
-        if (other.gameObject.CompareTag("LeftPlayer") || other.gameObject.CompareTag("RightPlayer"))
-        {
-            float speed = other.relativeVelocity.magnitude;
-            float newSpeed = speed * speedIncrease;
-
-            Vector3 newVelocity = other.relativeVelocity;
-            newVelocity = newVelocity.normalized * newSpeed;
-
-            rb.linearVelocity = newVelocity;
-        }
     }
 
     private void AddStartingForce()
